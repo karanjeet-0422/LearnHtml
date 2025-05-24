@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lists and Tables</title>
     <style>
-        table, th, td{
+        table,
+        th,
+        td {
             border: 2px solid black;
             border-spacing: 0;
             text-align: center;
         }
-
     </style>
 </head>
+
 <body>
     <ul type="circle">
         <li>This is the first element of unordered List</li>
@@ -29,9 +32,21 @@
         <li>This is the second element of ordered List</li>
         <li>This is the third element of ordered List</li>
     </ol>
+    <dl>
+        <dt>Coffee</dt>
+        <dd>- black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>- white cold drink</dd>
+    </dl>
 
     <h1>Tables</h1>
     <table>
+        <caption>Empolyee Data</caption>
+        <colgroup>
+            <col span="2" style="background-color: red;">
+            <col style="background-color:yellow">
+            <col style="background-color:yellow">
+        </colgroup>
         <thead>
             <tr>
                 <th>ID</th>
@@ -45,33 +60,53 @@
                 <td>001</td>
                 <td>Product 1</td>
                 <td>20</td>
-                <td>In Stock</td>
+                <td rowspan="3">In Stock</td>
             </tr>
             <tr>
                 <td>002</td>
                 <td>Product 2</td>
                 <td>25</td>
-                <td>In Stock</td>
+                <!-- <td>In Stock</td> -->
             </tr>
             <tr>
                 <td>003</td>
                 <td>Product 3</td>
-                <td>35</td>
-                <td>In Stock</td>
+                <td rowspan="2">35</td>
+                <!-- <td>In Stock</td> -->
             </tr>
             <tr>
                 <td>004</td>
                 <td>Product 4</td>
-                <td>40</td>
+                <!-- <td>40</td> -->
                 <td>Out Stock</td>
             </tr>
         </tbody>
+        <tfoot>
+            <tr><td colspan="4">Thank You</td></tr>
+        </tfoot>
     </table>
 </body>
+
 </html>
 <!-- 
-
+List
 <ul> tag is for creating a unordered list
 <ol> tag is for creating an ordered list
 <li> tag is for creating an item of the list
+type (List marker type)
+<dl>	Defines a description list
+<dt>	Defines a term in a description list
+<dd>	Describes the term in a description list
+
+Tables
+<table>	Defines a table
+<th>	Defines a header cell in a table
+<tr>	Defines a row in a table
+<td>	Defines a cell in a table
+<thead>	Groups the header content in a table
+<tbody>	Groups the body content in a table
+<tfoot>	Groups the footer content in a table
+<caption>	Defines a table caption
+<colgroup>	Specifies a group of one or more columns in a table for formatting
+<col>	Specifies column properties for each column within a <colgroup> element
 -->
